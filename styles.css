@@ -1693,6 +1693,18 @@ strong {
   border-top: 5px solid var(--color-primary);
 }
 
+.instructor-photo {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto 32px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 12%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
 .instructor-eyebrow {
   display: inline-block;
   font-size: 11px;
