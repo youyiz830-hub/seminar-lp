@@ -1085,41 +1085,45 @@ strong {
 .benefits-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 20px;
 }
 
 .benefit-card {
-  background: var(--color-bg);
-  border-radius: var(--radius-md);
+  background: #fff;
+  border-radius: 18px;
   padding: 36px 28px 32px;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.08);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(232,130,12,0.18);
 }
 
 .benefit-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--color-primary);
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-primary), #f5a623);
+  border-radius: 18px 18px 0 0;
 }
 
-/* Large decorative number — background watermark */
 .benefit-card::after {
   content: attr(data-num);
   position: absolute;
-  bottom: -10px;
-  right: 16px;
-  font-size: 120px;
+  bottom: -14px; right: 12px;
+  font-size: 110px;
   font-weight: 900;
   color: var(--color-primary);
-  opacity: 0.05;
+  opacity: 0.06;
   line-height: 1;
   pointer-events: none;
   letter-spacing: -0.04em;
@@ -1130,11 +1134,12 @@ strong {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  width: 56px;
-  height: 56px;
-  background: rgba(232,130,12,0.12);
-  border-radius: var(--radius-md);
   justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(232,130,12,0.15), rgba(245,166,35,0.08));
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(232,130,12,0.15);
 }
 
 .benefit-card__icon svg {
@@ -1147,15 +1152,15 @@ strong {
   font-weight: 800;
   color: var(--color-primary);
   letter-spacing: 0.22em;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-variant-numeric: tabular-nums;
 }
 
 .benefit-card__title {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 800;
-  line-height: 1.4;
-  margin-bottom: 16px;
+  line-height: 1.45;
+  margin-bottom: 14px;
   color: var(--color-text);
   letter-spacing: 0.01em;
 }
@@ -1274,18 +1279,43 @@ strong {
 
 .ai-compare__col {
   flex: 1;
-  border-radius: var(--radius-md);
-  padding: 24px;
+  border-radius: 16px;
+  padding: 28px 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  cursor: default;
 }
 
 .ai-compare__col--no {
   background: rgba(26, 26, 46, 0.04);
   border: 1.5px solid var(--color-border);
 }
+.ai-compare__col--no:hover {
+  background: rgba(200, 60, 60, 0.06);
+  border-color: rgba(200, 60, 60, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(200,60,60,0.08);
+}
 
 .ai-compare__col--yes {
   background: rgba(232, 130, 12, 0.06);
   border: 2px solid var(--color-primary);
+}
+.ai-compare__col--yes:hover {
+  background: rgba(232, 130, 12, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(232,130,12,0.2);
+}
+
+.ai-compare__list li {
+  transition: color 0.2s;
+}
+.ai-compare__col--yes .ai-compare__list li:hover {
+  color: var(--color-primary);
+}
+.ai-compare__col--no .ai-compare__list li:hover {
+  color: rgba(200,60,60,0.8);
+  text-decoration: line-through;
+  text-decoration-color: rgba(200,60,60,0.4);
 }
 
 .ai-compare__label {
@@ -1492,6 +1522,14 @@ strong {
   letter-spacing: 0.01em;
   flex: 1;
   margin-bottom: 24px;
+}
+
+.voice-key {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: linear-gradient(transparent 60%, rgba(232,130,12,0.15) 60%);
+  padding-bottom: 1px;
 }
 
 /* Footer: avatar + name/attr */
@@ -2340,4 +2378,9 @@ body { padding-bottom: 80px; }
   .trust-strip__stats { gap: 0; flex-direction: column; }
   .trust-stat { padding-block: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
   .trust-stat:last-child { border-bottom: none; }
+}
+
+@media (min-width: 768px) {
+  .benefits-grid { grid-template-columns: repeat(3, 1fr); }
+  .ai-compare { flex-direction: row; }
 }
