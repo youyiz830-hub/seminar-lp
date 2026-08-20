@@ -94,3 +94,20 @@
     });
   });
 }());
+
+/* ==========================================================================
+   Slide-in animation observer
+   ========================================================================== */
+(function () {
+  var els = document.querySelectorAll('.slide-in');
+  if (!els.length) return;
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  els.forEach(function (el) { obs.observe(el); });
+}());
