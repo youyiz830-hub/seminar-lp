@@ -451,33 +451,39 @@ strong {
 .hero__pain-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 28px;
+  gap: 12px;
+  margin-bottom: 32px;
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   text-align: left;
 }
 
 .hero__pain-list li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 15px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.88);
-  padding: 13px 18px;
-  background: rgba(255,255,255,0.08);
-  border-radius: var(--radius-sm);
-  border-left: 3px solid var(--color-primary);
-  line-height: 1.5;
+  gap: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.13);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border-left: 4px solid var(--color-primary);
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
 }
 
 .hero__pain-list li::before {
-  content: '✓';
+  content: '…';
   color: var(--color-primary);
   font-weight: 900;
-  font-size: 13px;
+  font-size: 22px;
   flex-shrink: 0;
+  line-height: 1;
+  letter-spacing: -2px;
 }
 
 .hero__event-line {
@@ -2512,4 +2518,7 @@ body { padding-bottom: 80px; }
   .voice-card { width: 280px; }
 
   .section-lead { font-size: 15px; margin-bottom: 40px; }
+
+  .hero__pain-list li { font-size: 15px; padding: 14px 16px; gap: 10px; }
+  .hero__pain-list li::before { font-size: 18px; }
 }
