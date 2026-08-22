@@ -2057,7 +2057,7 @@ strong {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 10, 22, 0.82);
+  background: rgba(10, 10, 22, 0.45);
 }
 .message-section .container {
   position: relative;
@@ -2075,9 +2075,9 @@ strong {
   line-height: 2;
   color: #fff;
   padding: 40px 32px;
-  background: rgba(10, 10, 22, 0.55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(10, 10, 22, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--radius-lg);
   border-left: 4px solid var(--color-primary);
 }
