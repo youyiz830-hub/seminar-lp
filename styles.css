@@ -2056,7 +2056,7 @@ strong {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 10, 22, 0.68);
+  background: rgba(10, 10, 22, 0.82);
 }
 .message-section .container {
   position: relative;
@@ -2069,14 +2069,14 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
   line-height: 2;
-  color: rgba(255,255,255,0.88);
+  color: #fff;
   padding: 40px 32px;
-  background: rgba(255,255,255,0.07);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(10, 10, 22, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: var(--radius-lg);
   border-left: 4px solid var(--color-primary);
 }
