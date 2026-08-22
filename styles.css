@@ -1908,25 +1908,38 @@ strong {
 .instructor-section { background: var(--color-bg-sub); }
 
 .instructor-layout {
-  max-width: 640px;
-  margin-inline: auto;
-  background: var(--color-bg);
-  border-radius: var(--radius-lg);
-  padding: 40px 32px;
-  box-shadow: var(--shadow-card);
-  border-top: 5px solid var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+@media (min-width: 768px) {
+  .instructor-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 64px;
+  }
 }
 
 .instructor-photo {
   display: block;
   width: 100%;
-  max-width: 260px;
-  margin: 0 auto 32px;
+  max-width: 280px;
+  margin: 0 auto;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center 12%;
   border-radius: var(--radius-lg);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .instructor-photo {
+    width: 340px;
+    max-width: 340px;
+    margin: 0;
+  }
 }
 
 .instructor-eyebrow {
