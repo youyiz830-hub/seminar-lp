@@ -1317,129 +1317,130 @@ strong {
 /* ==========================================================================
    AI Section
    ========================================================================== */
-/* AI section — light background for readability */
-.ai-section { background: #fff; }
+/* AI section */
+.ai-section { background: #F7F5F2; }
 .ai-section .section-heading { color: var(--color-text); }
 .ai-section .section-lead {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
   color: var(--color-text-body);
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 /* ── Warning card ── */
 .ai-warning {
-  background: #FFF5F5;
-  border: 2px solid #FFBABA;
-  border-radius: 16px;
-  padding: 32px 32px 28px;
-  margin-bottom: 24px;
+  background: #fff;
+  border: 2px solid #f5c0c0;
+  border-radius: 20px;
+  padding: 36px 36px 32px;
+  margin-bottom: 28px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(192,57,43,0.08);
 }
 .ai-warning::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 4px;
+  height: 5px;
   background: linear-gradient(90deg, #c0392b, #e74c3c);
 }
 .ai-warning__tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   color: #c0392b;
-  background: rgba(192,57,43,0.1);
-  border-radius: 6px;
-  padding: 4px 12px;
-  margin-bottom: 20px;
+  background: rgba(192,57,43,0.08);
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin-bottom: 24px;
 }
 .ai-warning__tag::before {
   content: '⚠';
-  font-size: 13px;
+  font-size: 14px;
 }
 .ai-warning__list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 14px;
+  margin-bottom: 28px;
 }
 .ai-warning__list li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 17px;
-  font-weight: 600;
-  color: #888;
-  text-decoration: line-through;
-  text-decoration-color: rgba(192,57,43,0.6);
-  text-decoration-thickness: 2px;
+  gap: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
   line-height: 1.55;
+  padding: 14px 18px;
+  background: rgba(192,57,43,0.04);
+  border-radius: 10px;
 }
 .ai-warning__x {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #e74c3c;
   color: #fff;
   font-weight: 900;
-  font-size: 12px;
+  font-size: 13px;
   flex-shrink: 0;
-  text-decoration: none;
 }
 .ai-warning__note {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--color-text);
-  line-height: 1.85;
-  border-top: 2px solid #FFBABA;
-  padding-top: 20px;
+  line-height: 1.9;
+  border-top: 2px solid #f5c0c0;
+  padding-top: 24px;
 }
 .ai-warning__note strong {
   color: #c0392b;
-  font-size: 19px;
+  font-size: 21px;
+  font-weight: 900;
 }
 
 /* ── Essence card ── */
 .ai-essence {
   background: #fff;
   border: 2px solid var(--color-primary);
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(232,130,12,0.15);
 }
 .ai-essence__header {
-  background: linear-gradient(135deg, var(--color-primary), #f5a623);
-  padding: 28px 32px;
+  background: linear-gradient(135deg, #d4720a, var(--color-primary));
+  padding: 32px 36px;
 }
 .ai-essence__badge {
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.15em;
-  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.8);
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .ai-essence__subtitle {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 800;
   color: #fff;
   line-height: 1.5;
 }
 .ai-essence__subtitle strong {
   display: block;
-  font-size: 24px;
-  margin-top: 4px;
+  font-size: 27px;
+  margin-top: 6px;
   color: #fff;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.15);
 }
 .ai-essence__grid {
   display: grid;
@@ -1449,33 +1450,33 @@ strong {
 .ai-essence__item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding: 24px 28px;
-  border-bottom: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
+  gap: 18px;
+  padding: 28px 32px;
+  border-bottom: 1px solid #f0ebe4;
+  border-right: 1px solid #f0ebe4;
   transition: background 0.2s ease;
   cursor: default;
 }
 .ai-essence__item:hover {
-  background: rgba(232,130,12,0.06);
+  background: rgba(232,130,12,0.05);
 }
 .ai-essence__item:nth-child(even) { border-right: none; }
 .ai-essence__item:nth-child(3),
 .ai-essence__item:nth-child(4) { border-bottom: none; }
 .ai-essence__num {
-  font-size: 13px;
+  font-size: 28px;
   font-weight: 900;
-  color: var(--color-primary);
-  letter-spacing: 0.08em;
-  padding-top: 3px;
+  color: rgba(232,130,12,0.25);
+  line-height: 1;
   flex-shrink: 0;
-  min-width: 24px;
+  letter-spacing: -1px;
 }
 .ai-essence__item p {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--color-text);
-  line-height: 1.6;
+  line-height: 1.65;
+  padding-top: 4px;
 }
 
 /* ==========================================================================
@@ -2596,15 +2597,16 @@ body { padding-bottom: 80px; }
   .ai-essence__grid { grid-template-columns: 1fr; }
   .ai-essence__item:nth-child(odd),
   .ai-essence__item:nth-child(even) { border-right: none; }
-  .ai-essence__item:nth-child(3) { border-bottom: 1px solid var(--color-border); }
+  .ai-essence__item:nth-child(3) { border-bottom: 1px solid #f0ebe4; }
   .ai-essence__item:nth-child(4) { border-bottom: none; }
   .ai-warning { padding: 24px 20px; }
-  .ai-warning__list li { font-size: 15px; }
-  .ai-warning__note { font-size: 15px; }
-  .ai-warning__note strong { font-size: 17px; }
-  .ai-essence__header { padding: 22px 20px; }
-  .ai-essence__subtitle { font-size: 17px; }
-  .ai-essence__subtitle strong { font-size: 20px; }
-  .ai-essence__item { padding: 18px 20px; }
+  .ai-warning__list li { font-size: 16px; padding: 12px 14px; }
+  .ai-warning__note { font-size: 16px; }
+  .ai-warning__note strong { font-size: 18px; }
+  .ai-essence__header { padding: 24px 22px; }
+  .ai-essence__subtitle { font-size: 18px; }
+  .ai-essence__subtitle strong { font-size: 22px; }
+  .ai-essence__item { padding: 20px 22px; gap: 14px; }
   .ai-essence__item p { font-size: 15px; }
+  .ai-essence__num { font-size: 22px; }
 }
