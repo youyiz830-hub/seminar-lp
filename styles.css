@@ -2065,7 +2065,7 @@ strong {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 10, 22, 0.42);
+  background: rgba(10, 10, 22, 0.25);
   z-index: 1;
 }
 .message-section .container {
@@ -2084,9 +2084,9 @@ strong {
   line-height: 2;
   color: #fff;
   padding: 40px 32px;
-  background: rgba(10, 10, 22, 0.35);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(10, 10, 22, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: var(--radius-lg);
   border-left: 4px solid var(--color-primary);
 }
