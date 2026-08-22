@@ -2084,7 +2084,7 @@ strong {
   line-height: 2;
   color: #fff;
   padding: 40px 32px;
-  background: rgba(10, 10, 22, 0.75);
+  background: rgba(10, 10, 22, 0.35);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: var(--radius-lg);
