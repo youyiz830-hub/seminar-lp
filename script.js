@@ -118,10 +118,14 @@
 (function () {
   var PEATIX_URL_1015 = 'https://peatix.com/event/5136210';
   var PEATIX_URL_1025 = 'https://peatix.com/event/5196593';
+  var PEATIX_URL_1104 = 'https://peatix.com/event/5197362';
 
   document.querySelectorAll('[data-peatix]').forEach(function (el) {
     var date = el.getAttribute('data-peatix');
-    el.href = date === '1015' ? PEATIX_URL_1015 : PEATIX_URL_1025;
+    var url = date === '1015' ? PEATIX_URL_1015
+            : date === '1025' ? PEATIX_URL_1025
+            : PEATIX_URL_1104;
+    el.href = url;
   });
 }());
 
