@@ -640,6 +640,14 @@ strong {
 .slide-in:nth-child(2).is-visible { animation-delay: 0.15s; }
 .slide-in:nth-child(3).is-visible { animation-delay: 0.30s; }
 
+/* Empathy list stagger */
+.empathy-list .slide-in:nth-child(1).is-visible { animation-delay: 0s; }
+.empathy-list .slide-in:nth-child(2).is-visible { animation-delay: 0.12s; }
+.empathy-list .slide-in:nth-child(3).is-visible { animation-delay: 0.24s; }
+.empathy-list .slide-in:nth-child(4).is-visible { animation-delay: 0.36s; }
+.empathy-list .slide-in:nth-child(5).is-visible { animation-delay: 0.48s; }
+.empathy-list .slide-in:nth-child(6).is-visible { animation-delay: 0.60s; }
+
 /* Apply box */
 .apply-box {
   background: var(--color-bg-sub);
