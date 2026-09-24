@@ -2815,6 +2815,17 @@ body { padding-bottom: 80px; }
   color: var(--color-text-sub);
   font-weight: 500;
 }
+.schedule-card__remaining {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 10px;
+  background: #e53e3e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
 
 .schedule-card__cta {
   display: block;
