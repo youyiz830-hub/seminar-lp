@@ -159,7 +159,7 @@
         <div class="schedule-map">
           <img
             src="assets/seminar-schedule.png"
-            alt="2日程一覧：10/15（木）20:00〜22:00、10/25（日）13:30〜15:30 オンライン開催（Zoom）参加費無料 各10名限定"
+            alt="2日程一覧：10/15（木）20:00〜22:00、10/25（日）20:00〜22:00 オンライン開催（Zoom）参加費無料 各10名限定"
             class="schedule-map__img"
             loading="eager"
           >
@@ -178,7 +178,7 @@
           <!-- 10/15 -->
           <div class="schedule-card slide-in slide-in--up">
             <a href="#" class="schedule-card__img-link" data-peatix="1015" target="_blank" rel="noopener noreferrer" aria-label="10/15開催ページへ">
-              <img src="assets/seminar-1015.png" alt="10月15日（木）20:00〜22:00 オンライン開催（Zoom）参加費無料 10名限定" class="schedule-card__img" loading="lazy">
+              <img src="assets/seminar-2026-10-15.png" alt="AI時代に、突き抜けた成果を獲得する方法 — 2026年10月15日オンラインセミナー" class="schedule-card__img" loading="lazy">
             </a>
             <div class="schedule-card__info">
               <span class="schedule-card__free-badge">無料 · 10名限定</span>
@@ -193,12 +193,12 @@
           <!-- 10/25 -->
           <div class="schedule-card slide-in slide-in--up">
             <a href="#" class="schedule-card__img-link" data-peatix="1025" target="_blank" rel="noopener noreferrer" aria-label="10/25開催ページへ">
-              <img src="assets/seminar-1025.png" alt="10月25日（日）13:30〜15:30 オンライン開催（Zoom）参加費無料 10名限定" class="schedule-card__img" loading="lazy">
+              <img src="assets/seminar-2026-10-25.png" alt="AI時代に、突き抜けた成果を獲得する方法 — 2026年10月25日オンラインセミナー" class="schedule-card__img" loading="lazy">
             </a>
             <div class="schedule-card__info">
               <span class="schedule-card__free-badge">無料 · 10名限定</span>
               <p class="schedule-card__date">10月25日（日）</p>
-              <p class="schedule-card__time">13:30〜15:30</p>
+              <p class="schedule-card__time">20:00〜22:00</p>
               <p class="schedule-card__venue">オンライン開催（Zoom）</p>
             </div>
             <a href="#" class="btn btn--primary btn--lg schedule-card__cta" data-peatix="1025" data-cta-location="schedule-banner" target="_blank" rel="noopener noreferrer">
@@ -259,10 +259,9 @@
 
             <div class="apply-box__cta">
                 <a href="https://peatix.com/event/5135224" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer" data-cta-location="overview">福岡会場に申し込む</a>
-                <div class="apply-box__online-btns">
-                  <a href="#" class="btn btn--outline btn--lg" data-peatix="1015" target="_blank" rel="noopener noreferrer" data-cta-location="overview-1015">オンライン 10/15に申し込む</a>
-                  <a href="#" class="btn btn--outline btn--lg" data-peatix="1025" target="_blank" rel="noopener noreferrer" data-cta-location="overview-1025">オンライン 10/25に申し込む</a>
-                </div>
+                <a href="#" class="btn btn--outline btn--lg js-open-date-modal" data-cta-location="overview-online">
+                  オンライン参加日程を選ぶ（無料）
+                </a>
               </div>
 
           </div>
@@ -343,10 +342,9 @@
           </div>
           <div class="mid-cta__btns">
             <a href="https://peatix.com/event/5135224" class="btn btn--white btn--lg" target="_blank" rel="noopener noreferrer" data-cta-location="mid-cta-1">福岡会場に申し込む</a>
-            <div class="mid-cta__online-btns">
-              <a href="#" class="btn btn--outline-white" data-peatix="1015" target="_blank" rel="noopener noreferrer" data-cta-location="mid-cta-1-1015">10/15に申し込む</a>
-              <a href="#" class="btn btn--outline-white" data-peatix="1025" target="_blank" rel="noopener noreferrer" data-cta-location="mid-cta-1-1025">10/25に申し込む</a>
-            </div>
+            <a href="#" class="btn btn--outline-white js-open-date-modal" data-cta-location="mid-cta-1-online">
+              オンライン参加日程を選ぶ（無料）
+            </a>
           </div>
         </div>
       </div>
@@ -836,10 +834,9 @@
           </div>
           <div class="mid-cta__btns">
             <a href="https://peatix.com/event/5135224" class="btn btn--white btn--lg" target="_blank" rel="noopener noreferrer" data-cta-location="mid-cta-2">福岡会場に申し込む</a>
-            <div class="mid-cta__online-btns">
-              <a href="#" class="btn btn--outline-white" data-peatix="1015" target="_blank" rel="noopener noreferrer" data-cta-location="mid-cta-2-1015">10/15に申し込む</a>
-              <a href="#" class="btn btn--outline-white" data-peatix="1025" target="_blank" rel="noopener noreferrer" data-cta-location="mid-cta-2-1025">10/25に申し込む</a>
-            </div>
+            <a href="#" class="btn btn--outline-white js-open-date-modal" data-cta-location="mid-cta-2-online">
+              オンライン参加日程を選ぶ（無料）
+            </a>
           </div>
         </div>
       </div>
@@ -1000,11 +997,8 @@
         <div class="final-cta-online">
           <p class="final-cta-online__label">オンライン開催はこちら</p>
           <div class="final-cta-online__btns">
-            <a href="#" class="btn btn--outline-white btn--lg" data-peatix="1015" target="_blank" rel="noopener noreferrer" data-cta-location="final-cta-1015">
-              10/15に申し込む（無料）
-            </a>
-            <a href="#" class="btn btn--outline-white btn--lg" data-peatix="1025" target="_blank" rel="noopener noreferrer" data-cta-location="final-cta-1025">
-              10/25に申し込む（無料）
+            <a href="#" class="btn btn--outline-white btn--lg js-open-date-modal" data-cta-location="final-cta-online">
+              参加日程を選んで申し込む（無料）
             </a>
           </div>
         </div>
@@ -1025,7 +1019,7 @@
             <!-- 10/15 -->
             <div class="online-date-card">
               <a href="#" class="online-date-card__img-link" data-peatix="1015" target="_blank" rel="noopener noreferrer" aria-label="10/15開催ページへ">
-                <img src="assets/seminar-1015.png" alt="10月15日（木）20:00〜22:00 オンライン開催（Zoom）参加費無料 10名限定" class="online-date-card__img" loading="lazy">
+                <img src="assets/seminar-2026-10-15.png" alt="AI時代に、突き抜けた成果を獲得する方法 — 2026年10月15日オンラインセミナー" class="online-date-card__img" loading="lazy">
               </a>
               <div class="online-date-card__info">
                 <p class="online-date-card__day">10月15日（木）</p>
@@ -1040,11 +1034,11 @@
             <!-- 10/25 -->
             <div class="online-date-card">
               <a href="#" class="online-date-card__img-link" data-peatix="1025" target="_blank" rel="noopener noreferrer" aria-label="10/25開催ページへ">
-                <img src="assets/seminar-1025.png" alt="10月25日（日）13:30〜15:30 オンライン開催（Zoom）参加費無料 10名限定" class="online-date-card__img" loading="lazy">
+                <img src="assets/seminar-2026-10-25.png" alt="AI時代に、突き抜けた成果を獲得する方法 — 2026年10月25日オンラインセミナー" class="online-date-card__img" loading="lazy">
               </a>
               <div class="online-date-card__info">
                 <p class="online-date-card__day">10月25日（日）</p>
-                <p class="online-date-card__time">13:30〜15:30</p>
+                <p class="online-date-card__time">20:00〜22:00</p>
                 <p class="online-date-card__venue">オンライン開催（Zoom）</p>
               </div>
               <a href="#" class="btn btn--primary btn--lg online-date-card__cta" data-peatix="1025" target="_blank" rel="noopener noreferrer" data-cta-location="online-1025">
@@ -1125,12 +1119,52 @@
 
   <!-- ===== MOBILE FIXED CTA ===== -->
   <div class="mobile-cta" aria-label="申し込みへのショートカット" role="complementary">
-    <a href="#" class="mobile-cta__btn" data-peatix="1015" target="_blank" rel="noopener noreferrer" data-cta-location="mobile-fixed-1015">
-      10/15に申し込む（無料）
+    <a href="#" class="mobile-cta__btn js-open-date-modal" data-cta-location="mobile-fixed-online">
+      参加日程を選んで申し込む（無料）
     </a>
-    <a href="#" class="mobile-cta__btn mobile-cta__btn--secondary" data-peatix="1025" target="_blank" rel="noopener noreferrer" data-cta-location="mobile-fixed-1025">
-      10/25に申し込む（無料）
-    </a>
+  </div>
+
+
+  <!-- ===== DATE SELECTION MODAL ===== -->
+  <div class="date-modal" id="date-modal" role="dialog" aria-modal="true" aria-labelledby="date-modal-heading" hidden>
+    <div class="date-modal__backdrop" id="date-modal-backdrop"></div>
+    <div class="date-modal__inner">
+      <button class="date-modal__close" id="date-modal-close" aria-label="閉じる（Escキーでも閉じられます）">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="date-modal__header">
+        <h3 id="date-modal-heading" class="date-modal__heading">参加日程を選んでください</h3>
+        <p class="date-modal__sub">オンライン（Zoom）· 参加費無料 · 各10名限定</p>
+      </div>
+      <div class="date-modal__cards">
+        <!-- 10/15 -->
+        <a href="#" class="date-modal__card" data-peatix="1015" target="_blank" rel="noopener noreferrer">
+          <img
+            src="assets/seminar-2026-10-15.png"
+            alt="AI時代に、突き抜けた成果を獲得する方法 — 2026年10月15日オンラインセミナー"
+            class="date-modal__img" loading="lazy">
+          <div class="date-modal__card-body">
+            <p class="date-modal__card-date">10月15日（木）</p>
+            <p class="date-modal__card-time">20:00〜22:00</p>
+            <p class="date-modal__card-venue">オンライン · 参加無料</p>
+          </div>
+          <span class="date-modal__card-btn btn btn--primary btn--sm">10/15に申し込む</span>
+        </a>
+        <!-- 10/25 -->
+        <a href="#" class="date-modal__card" data-peatix="1025" target="_blank" rel="noopener noreferrer">
+          <img
+            src="assets/seminar-2026-10-25.png"
+            alt="AI時代に、突き抜けた成果を獲得する方法 — 2026年10月25日オンラインセミナー"
+            class="date-modal__img" loading="lazy">
+          <div class="date-modal__card-body">
+            <p class="date-modal__card-date">10月25日（日）</p>
+            <p class="date-modal__card-time">20:00〜22:00</p>
+            <p class="date-modal__card-venue">オンライン · 参加無料</p>
+          </div>
+          <span class="date-modal__card-btn btn btn--primary btn--sm">10/25に申し込む</span>
+        </a>
+      </div>
+    </div>
   </div>
 
   <!-- ===== LIGHTBOX ===== -->
