@@ -2366,6 +2366,15 @@ details[open] > .faq-question::after {
   font-weight: 900;
 }
 
+.online-date-note {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 6px;
+  letter-spacing: 0.03em;
+}
+
 .online-layout {
   display: flex;
   flex-direction: column;
