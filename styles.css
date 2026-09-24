@@ -371,6 +371,10 @@ strong {
   margin-bottom: 20px;
 }
 
+.hero__heading-line {
+  display: block;
+}
+
 .hero__sub {
   font-size: 16px;
   color: rgba(255,255,255,0.82);
