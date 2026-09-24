@@ -111,3 +111,73 @@
   }, { threshold: 0.2 });
   els.forEach(function (el) { obs.observe(el); });
 }());
+
+/* ==========================================================================
+   Peatix URL injection
+   ========================================================================== */
+(function () {
+  var PEATIX_URL_1015 = 'https://peatix.com/event/5136210';
+  var PEATIX_URL_1025 = 'https://peatix.com/event/5196593';
+
+  document.querySelectorAll('[data-peatix]').forEach(function (el) {
+    var date = el.getAttribute('data-peatix');
+    el.href = date === '1015' ? PEATIX_URL_1015 : PEATIX_URL_1025;
+  });
+}());
+
+/* ==========================================================================
+   Date selection modal
+   ========================================================================== */
+(function () {
+  var modal    = document.getElementById('date-modal');
+  var closeBtn = document.getElementById('date-modal-close');
+  var backdrop = document.getElementById('date-modal-backdrop');
+  var triggers = document.querySelectorAll('.js-open-date-modal');
+
+  if (!modal) return;
+
+  var previouslyFocused = null;
+
+  function openModal() {
+    previouslyFocused = document.activeElement;
+    modal.removeAttribute('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.setAttribute('hidden', '');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (previouslyFocused) previouslyFocused.focus();
+  }
+
+  triggers.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', function (e) {
+    if (!modal.hasAttribute('hidden') && (e.key === 'Escape' || e.key === 'Esc')) {
+      closeModal();
+    }
+  });
+
+  modal.addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab') return;
+    var focusable = modal.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+    var first = focusable[0];
+    var last  = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  });
+}());
