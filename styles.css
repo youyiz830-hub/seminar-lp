@@ -3326,18 +3326,58 @@ body { padding-bottom: 80px; }
   color: var(--color-accent);
 }
 .participatory-highlight {
-  border-left: 4px solid var(--color-accent);
-  padding: 20px 24px;
-  background: #fff;
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  line-height: 1.9;
+  background: var(--color-text);
+  border-radius: var(--radius-lg);
+  padding: 52px 36px 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-.participatory-highlight p { margin: 0 0 12px; }
-.participatory-highlight p:last-child { margin-bottom: 0; }
-.participatory-capacity {
-  margin-top: 16px;
+.participatory-highlight::before {
+  content: '\201C';
+  position: absolute;
+  top: -20px;
+  left: 16px;
+  font-size: 160px;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.10;
+  font-family: Georgia, serif;
+  pointer-events: none;
+}
+/* Setup line */
+.participatory-highlight > p:first-child {
+  color: rgba(255,255,255,0.45);
   font-size: 14px;
-  color: var(--color-text-sub);
+  margin: 0 0 10px;
+  line-height: 1.8;
+}
+/* Main quote */
+.participatory-highlight > p:nth-child(2) {
+  margin: 0 0 32px;
+}
+.participatory-highlight > p:nth-child(2) strong {
+  display: block;
+  color: #fff;
+  font-size: clamp(20px, 5vw, 28px);
+  font-weight: 800;
+  line-height: 1.75;
+}
+/* 10名限定 pill */
+.participatory-capacity {
+  display: inline-block;
+  padding: 10px 24px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 40px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  margin: 0;
+}
+.participatory-capacity strong {
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
 /* ==========================================================================
