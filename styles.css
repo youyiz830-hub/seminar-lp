@@ -3326,9 +3326,10 @@ body { padding-bottom: 80px; }
   color: var(--color-accent);
 }
 .participatory-highlight {
-  background: var(--color-text);
+  background: #FFF5EB;
+  border: 2px solid var(--color-accent);
   border-radius: var(--radius-lg);
-  padding: 52px 36px 44px;
+  padding: 48px 36px 40px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -3341,25 +3342,25 @@ body { padding-bottom: 80px; }
   font-size: 160px;
   line-height: 1;
   color: var(--color-accent);
-  opacity: 0.10;
+  opacity: 0.12;
   font-family: Georgia, serif;
   pointer-events: none;
 }
 /* Setup line */
 .participatory-highlight > p:first-child {
-  color: rgba(255,255,255,0.45);
+  color: var(--color-text-sub);
   font-size: 14px;
   margin: 0 0 10px;
   line-height: 1.8;
 }
 /* Main quote */
 .participatory-highlight > p:nth-child(2) {
-  margin: 0 0 32px;
+  margin: 0 0 28px;
 }
 .participatory-highlight > p:nth-child(2) strong {
   display: block;
-  color: #fff;
-  font-size: clamp(20px, 5vw, 28px);
+  color: var(--color-text);
+  font-size: clamp(20px, 5vw, 27px);
   font-weight: 800;
   line-height: 1.75;
 }
@@ -3367,11 +3368,11 @@ body { padding-bottom: 80px; }
 .participatory-capacity {
   display: inline-block;
   padding: 10px 24px;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: #fff;
+  border: 1px solid var(--color-border);
   border-radius: 40px;
   font-size: 13px;
-  color: rgba(255,255,255,0.6);
+  color: var(--color-text-sub);
   line-height: 1.7;
   margin: 0;
 }
