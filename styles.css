@@ -3224,6 +3224,7 @@ body { padding-bottom: 80px; }
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 24px;
 }
 .hero__badge {
