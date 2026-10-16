@@ -3317,27 +3317,37 @@ body { padding-bottom: 80px; }
 .participatory-body {
   background: var(--color-bg-sub);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 28px 28px 24px;
   margin: 28px 0;
-  line-height: 1.9;
 }
-.participatory-body p { margin: 0 0 12px; }
-.participatory-body p:last-child { margin-bottom: 0; }
-.participatory-list {
+.participatory-body__lead {
+  font-size: 14px;
+  color: var(--color-text-sub);
+  margin: 0 0 14px;
+}
+.participatory-tags {
   list-style: none;
   padding: 0;
-  margin: 8px 0 16px 8px;
+  margin: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.participatory-list li {
-  padding: 4px 0 4px 20px;
-  position: relative;
-  font-weight: 500;
+.participatory-tag {
+  padding: 8px 18px;
+  background: #fff;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1;
 }
-.participatory-list li::before {
-  content: '\30FB';
-  position: absolute;
-  left: 0;
-  color: var(--color-accent);
+.participatory-body__desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color-text-body);
+  margin: 0;
 }
 .participatory-highlight {
   background: #FFF5EB;
