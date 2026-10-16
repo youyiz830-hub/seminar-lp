@@ -3439,3 +3439,16 @@ body { padding-bottom: 80px; }
   margin-top: 32px;
   justify-content: center;
 }
+
+.ai-note__callout {
+  margin-top: 20px;
+  padding: 18px 22px;
+  background: var(--color-primary-light);
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--color-text);
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
