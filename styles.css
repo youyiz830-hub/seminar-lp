@@ -373,6 +373,17 @@ strong {
 
 .hero__heading-line {
   display: block;
+  opacity: 0;
+  transform: scale(0.55);
+  animation: punchZoom 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero__heading-line:nth-child(1) { animation-delay: 0.2s; }
+.hero__heading-line:nth-child(2) { animation-delay: 0.55s; }
+
+@keyframes punchZoom {
+  0%   { opacity: 0; transform: scale(0.55); }
+  65%  { opacity: 1; transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 /* 320px以下の極小画面でのみ改行を表示 */
