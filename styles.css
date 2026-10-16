@@ -3246,25 +3246,56 @@ body { padding-bottom: 80px; }
 .limit-body {
   background: var(--color-bg);
   border-radius: var(--radius-lg);
-  padding: 28px 28px;
-  margin: 32px 0;
-  line-height: 2;
+  padding: 28px;
+  margin: 32px 0 20px;
 }
-.limit-body p { margin: 0 0 12px; }
-.limit-body p:last-child { margin-bottom: 0; }
+.limit-body__intro {
+  font-size: 14px;
+  color: var(--color-text-sub);
+  margin: 0 0 16px;
+}
+.limit-body__bridge {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--color-text-body);
+  margin: 0;
+}
 .limit-quote-list {
   list-style: none;
   padding: 0;
-  margin: 8px 0 16px 16px;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .limit-quote-list li {
-  padding: 4px 0;
-  color: var(--color-accent);
-  font-weight: 600;
-  font-size: 15px;
+  padding: 14px 20px;
+  background: var(--color-bg-sub);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 8px 8px 0;
+  font-size: clamp(17px, 4vw, 20px);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.4;
 }
-.limit-quote-list li::before { content: '\201C'; }
-.limit-quote-list li::after { content: '\201D'; }
+.limit-conclusion {
+  background: var(--color-bg-dark);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  margin: 0 0 32px;
+  line-height: 1.85;
+  text-align: center;
+}
+.limit-conclusion p { margin: 0 0 8px; font-size: 15px; color: rgba(255,255,255,0.7); }
+.limit-conclusion p:last-child { margin: 0; }
+.limit-conclusion strong {
+  display: block;
+  font-size: clamp(18px, 4.5vw, 24px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.75;
+}
 
 .premise-flow {
   margin: 32px auto;
