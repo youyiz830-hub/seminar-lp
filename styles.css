@@ -3,9 +3,9 @@
    ========================================================================== */
 :root {
   /* Colors */
-  --color-primary: #E8820C;
-  --color-primary-dark: #C96D00;
-  --color-primary-light: rgba(232, 130, 12, 0.10);
+  --color-primary: #D97706;
+  --color-primary-dark: #B45309;
+  --color-primary-light: rgba(217, 119, 6, 0.10);
   --color-bg: #FFFFFF;
   --color-bg-sub: #FAF8F5;
   --color-bg-dark: #0F0F1E;
@@ -14,7 +14,7 @@
   --color-text-sub: #6B6B82;
   --color-text-light: #9999B0;
   --color-border: #E2DDD6;
-  --color-accent: #E8820C;
+  --color-accent: #D97706;
 
   /* Typography */
   --font-base: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
@@ -1581,6 +1581,10 @@ strong {
   letter-spacing: 0.01em;
 }
 
+.photo-section {
+  background: var(--color-bg);
+}
+
 .event-photo-wrap { text-align: center; }
 
 .event-photo {
@@ -1596,6 +1600,12 @@ strong {
   margin-top: 12px;
   font-size: 12px;
   color: var(--color-text-light);
+}
+
+@media (max-width: 640px) {
+  .event-photo {
+    object-position: center 30%;
+  }
 }
 
 /* ==========================================================================
@@ -1780,7 +1790,11 @@ strong {
 }
 
 /* Survey originals */
-.survey-originals { text-align: center; }
+.survey-originals {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 8px;
+}
 
 .survey-originals__label {
   font-size: 12px;
