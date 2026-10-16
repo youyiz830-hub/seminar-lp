@@ -3248,6 +3248,7 @@ body { padding-bottom: 80px; }
   border-radius: var(--radius-lg);
   padding: 28px;
   margin: 32px 0 20px;
+  text-align: center;
 }
 .limit-body__intro {
   font-size: 14px;
@@ -3271,12 +3272,13 @@ body { padding-bottom: 80px; }
 .limit-quote-list li {
   padding: 14px 20px;
   background: var(--color-bg-sub);
-  border-left: 4px solid var(--color-primary);
-  border-radius: 0 8px 8px 0;
+  border-top: 4px solid var(--color-primary);
+  border-radius: 0 0 8px 8px;
   font-size: clamp(17px, 4vw, 20px);
   font-weight: 700;
   color: var(--color-text);
   line-height: 1.4;
+  text-align: center;
 }
 .limit-conclusion {
   background: var(--color-bg-dark);
