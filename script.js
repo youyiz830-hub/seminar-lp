@@ -113,6 +113,42 @@
 }());
 
 /* ==========================================================================
+   Count-up animation
+   ========================================================================== */
+(function () {
+  var els = document.querySelectorAll('[data-countup]');
+  if (!els.length) return;
+
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute('data-countup'), 10);
+    var countEl = el.querySelector('.trust-stat__count');
+    if (!countEl) return;
+    var duration = 1200;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      countEl.textContent = Math.floor(ease * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else countEl.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  els.forEach(function (el) { obs.observe(el); });
+}());
+
+/* ==========================================================================
    Peatix URL injection
    ========================================================================== */
 (function () {
