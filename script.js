@@ -113,75 +113,83 @@
 }());
 
 /* ==========================================================================
-   Peatix URL injection
+   Count-up animation
    ========================================================================== */
 (function () {
-  var PEATIX_URL_1015 = 'https://peatix.com/event/5136210';
-  var PEATIX_URL_1025 = 'https://peatix.com/event/5196593';
-  var PEATIX_URL_1104 = 'https://peatix.com/event/5197362';
+  function initCountup() {
+    var els = document.querySelectorAll('[data-countup]');
+    if (!els.length) return;
 
-  document.querySelectorAll('[data-peatix]').forEach(function (el) {
-    var date = el.getAttribute('data-peatix');
-    var url = date === '1015' ? PEATIX_URL_1015
-            : date === '1025' ? PEATIX_URL_1025
-            : PEATIX_URL_1104;
-    el.href = url;
-  });
+    var done = [];
+
+    function animateCount(el) {
+      var target = parseInt(el.getAttribute('data-countup'), 10);
+      var countEl = el.querySelector('.trust-stat__count');
+      if (!countEl) return;
+      countEl.textContent = '0';
+      var duration = 1200;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
+        countEl.textContent = Math.floor(ease * target);
+        if (progress < 1) requestAnimationFrame(step);
+        else countEl.textContent = target;
+      }
+      requestAnimationFrame(step);
+    }
+
+    function isInView(el) {
+      var rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+
+    function check() {
+      els.forEach(function (el) {
+        if (done.indexOf(el) === -1 && isInView(el)) {
+          done.push(el);
+          animateCount(el);
+        }
+      });
+    }
+
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCountup);
+  } else {
+    initCountup();
+  }
 }());
 
 /* ==========================================================================
-   Date selection modal
+   Peatix URL 管理
+   12/5セミナーのURLが確定したら PEATIX_URL を更新してください
+   未設定の場合はページ内の開催概要セクションへ遷移します
    ========================================================================== */
 (function () {
-  var modal    = document.getElementById('date-modal');
-  var closeBtn = document.getElementById('date-modal-close');
-  var backdrop = document.getElementById('date-modal-backdrop');
-  var triggers = document.querySelectorAll('.js-open-date-modal');
-
-  if (!modal) return;
-
-  var previouslyFocused = null;
-
-  function openModal() {
-    previouslyFocused = document.activeElement;
-    modal.removeAttribute('hidden');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    if (closeBtn) closeBtn.focus();
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname);
   }
+}());
 
-  function closeModal() {
-    modal.setAttribute('hidden', '');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (previouslyFocused) previouslyFocused.focus();
-  }
+(function () {
+  var PEATIX_URL   = 'https://peatix.com/event/5210817';
+  var FALLBACK_HREF = '#';
 
-  triggers.forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      e.preventDefault();
-      openModal();
-    });
-  });
-
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (backdrop) backdrop.addEventListener('click', closeModal);
-
-  document.addEventListener('keydown', function (e) {
-    if (!modal.hasAttribute('hidden') && (e.key === 'Escape' || e.key === 'Esc')) {
-      closeModal();
-    }
-  });
-
-  modal.addEventListener('keydown', function (e) {
-    if (e.key !== 'Tab') return;
-    var focusable = modal.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
-    var first = focusable[0];
-    var last  = focusable[focusable.length - 1];
-    if (e.shiftKey) {
-      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+  document.querySelectorAll('[data-cta-location]').forEach(function (el) {
+    if (el.tagName !== 'A') return;
+    if (PEATIX_URL) {
+      el.href = PEATIX_URL;
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener noreferrer');
     } else {
-      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+      el.href = FALLBACK_HREF;
+      el.removeAttribute('target');
+      el.removeAttribute('rel');
     }
   });
 }());
